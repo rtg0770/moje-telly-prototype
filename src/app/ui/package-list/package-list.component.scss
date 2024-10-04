@@ -1,0 +1,32 @@
+@import "../../../scss/mixins";
+@import "../../../scss/variables";
+
+.package-list {
+    display: grid;
+    margin-bottom: 43px;
+    grid-template-areas: "title" "cards";
+    row-gap: 32px;
+    padding: 21px;
+
+    > h2 {
+        font-size: $big-font;
+        grid-area: title;
+        text-align: center;
+    }
+
+    > .cards {
+        grid-area: cards;
+        display: grid;
+        gap: 21px;
+        justify-content: center;
+        align-items: center;
+
+        // Default for mobile: 1 column
+        grid-template-columns: 1fr;
+
+        // Starting from medium breakpoint: 3 columns
+        @include respond-to('medium') {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

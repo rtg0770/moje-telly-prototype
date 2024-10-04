@@ -1,0 +1,20 @@
+<div class="package-list">
+  <h2>{{ packageGroup.title }}</h2>
+  <div class="cards">
+    @for(package of packageGroup.packages; track package){
+    <ui-package-card
+      [label]="package.label"
+      [duration]="package.duration"
+      [discount]="package.discount"
+      [description]="package.description"
+      [previousPricePerMonth]="package.previousPricePerMonth"
+      [pricePerMonth]="package.pricePerMonth"
+      [pricePerDay]="package.pricePerDay"
+      [selected]="package.selected"
+      [chips]="package.chips"
+      [color]="packageGroup.color"
+      [gradient]="packageGroup.gradient"
+    ></ui-package-card>
+    }
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div
+  class="package-card"
+  [ngClass]="{ selected: selected }"
+  [ngStyle]="{
+    background: selected ? gradient : '',
+    'border-color': hovering ? color : 'transparent'
+  }"
+  (mouseenter)="hovering = true"
+  (mouseleave)="hovering = false"
+>
+  @if(chips && chips.length > 0){
+  <div class="package-card__chipset">
+    @for(chip of chips; track chip){
+    <div class="package-card__chip package-card__chip--favourite">
+      {{ chip }}
+    </div>
+    }
+  </div>
+  }
+  <div class="package-card__header">
+    <span class="package-card__name">{{ label }}</span>
+    <span class="package-card__duration">{{ duration }}</span>
+    <span class="package-card__description">{{ description }}</span>
+  </div>
+  <div class="package-card__pricing">
+    <span class="package-card__price-per-month"
+      >{{ pricePerMonth | currency : "CZK" }} měsíčně</span
+    >
+    <span class="package-card__price-per-day"
+      >({{ pricePerDay | currency : "CZK" }} / 1 den)</span
+    >
+  </div>
+  <div class="package-card__actions">
+    <button
+      class="package-card__button"
+      (mouseenter)="hovering = true"
+      (mouseleave)="hovering = false"
+      (click)="toggleSelection()"
+    >
+      <span class="text-part">
+        {{ selected ? (hovering ? "Odebrat" : "Vybráno") : "Vybrat" }}
+      </span>
+      @if(selected){
+      <mat-icon
+        class="icon-square"
+        [ngClass]="{
+          'icon-close': hovering && selected,
+          'icon-check': !hovering && selected
+        }"
+      >
+        {{ hovering ? "close" : "check" }}
+      </mat-icon>
+      }
+    </button>
+
+    <a [routerLink]="['#']"
+      ><span class="package-card__link">Detail balíčku</span></a
+    >
+  </div>
+</div>

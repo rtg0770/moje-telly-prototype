@@ -1,0 +1,47 @@
+// BREAKPOINTS
+$breakpoints: (
+  "small": 576px,
+  "medium": 768px,
+  "large": 992px,
+  "xlarge": 1200px,
+  ) !default;
+
+// COLORS - listing for now also here even though they are being send in the content object
+// # STATUS
+$success-status: #4caf50;
+$error-status: #ff4d4d;
+
+// # TEXT
+$color-white: #fff;
+$color-textBlack: #000;
+$color-textDescriptionGrey: #737373;
+$color-textDiscount: #FF005A;
+
+// # BADGE
+$color-chipFavourite: #0096fa;
+
+// # PACKAGES
+$color-packageStandart: #1e1ec8;
+$color-packageStandartBg: #F9F9FD;
+$color-packageSport: #00C8A0;
+$color-packageRed: #D00000;
+
+$gradientStandart: linear-gradient(90deg, #1E1EC8 0%, #4141EA 100%
+);
+$gradientSport: linear-gradient(90deg, #00C8A0 0%, #1BE1B9 100%);
+$gradientRed: linear-gradient(90deg, #B80000 0%, #CF0000 100%);
+
+// SPACE
+$xxs-space: 2px;
+$xs-space: 7px;
+$s-space: 10px;
+$m-space: 21px;
+$l-space: 32px;
+$iconBig-space: 36px;
+
+// FONT
+$xsmall-font: clamp(0.5rem, 1vw, 0.625rem); // 0.625rem as max size, 0.5rem as min size
+$small-font: clamp(0.7rem, 1.5vw, 0.815rem); // 0.815rem as max size, 0.7rem as min size
+$medium-font: clamp(0.9rem, 2vw, 1rem); // 1rem as max size, 0.9rem as min size
+$bigbutton-font: clamp(1rem, 2.5vw, 1.125rem); // 1.125rem as max size, 1rem as min size
+$big-font: clamp(1.2rem, 3vw, 1.625rem); // 1.625rem as max size, 1.2rem as min size
