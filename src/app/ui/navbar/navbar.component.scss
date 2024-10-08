@@ -1,0 +1,26 @@
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    height: 89px;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.logo {
+    /* Adjust logo size if necessary */
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu span {
+    margin-right: 8px; /* Space between the text and the icon */
+}
+
+.menu-icon {
+    /* Adjust icon size if necessary */
+    height: 20px;
+}

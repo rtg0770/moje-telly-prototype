@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { PackageListComponent } from '../../ui/package-list/package-list.component';
 import { PackageGroup } from '../../util/type/package-group.interface';
+import { NavbarComponent } from '../../ui/navbar/navbar.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'page-select-package',
   standalone: true,
-  imports: [PackageListComponent],
+  imports: [CommonModule, PackageListComponent, NavbarComponent],
   templateUrl: './page-select-package.component.html',
   styleUrl: './page-select-package.component.scss',
 })
@@ -15,6 +17,7 @@ export class PageSelectPackageComponent {
       title: 'Standartní balíčky',
       color: '#1E1EC8',
       gradient: 'linear-gradient(90deg, #1E1EC8 0%, #4141EA 100%)',
+      showType: 'STANDART',
       packages: [
         {
           label: 'Velký balíček',
@@ -50,6 +53,7 @@ export class PageSelectPackageComponent {
       title: 'Sportovní balíčky',
       color: '#00C8A0',
       gradient: 'linear-gradient(90deg, #00C8A0 0%, #1BE1B9 100%)',
+      showType: 'SPORT',
       packages: [
         {
           label: 'Sport online',
@@ -81,6 +85,7 @@ export class PageSelectPackageComponent {
       title: 'Red online',
       color: '#D00000',
       gradient: 'linear-gradient(90deg, #B80000 0%, #CF0000 100%)',
+      showType: 'RED',
       packages: [
         {
           label: 'Red online',
@@ -104,6 +109,43 @@ export class PageSelectPackageComponent {
           discount: 'o 77% výhodnější',
           pricePerMonth: 2500,
           pricePerDay: 7,
+          selected: false,
+        },
+      ],
+    },
+    {
+      title: 'OKTAGON balíček',
+      color: '#FFD200',
+      gradient:
+        'linear-gradient(90deg, rgba(255, 249, 221, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%)',
+      showType: 'OKTAGON',
+      packages: [
+        {
+          description: 'OKTAGON 61 BRNO bla bla',
+          onePrice: 320,
+          selected: false,
+        },
+      ],
+    },
+    {
+      title: 'HBO balíček + max',
+      color: '#1E1EC8',
+      gradient:
+        'linear-gradient(270deg, rgba(255, 255, 255, 0.10) 0%, rgba(30, 30, 200, 0.10) 100%)',
+      showType: 'HBO',
+      packages: [
+        {
+          label: 'HBO balíček',
+          description: 'Základní 3 kanály HBO',
+          pricePerMonth: 200,
+          pricePerDay: 15,
+          selected: false,
+        },
+        {
+          label: 'MAX balíček',
+          description: 'Základní 3 kanály MAX',
+          pricePerMonth: 200,
+          pricePerDay: 15,
           selected: false,
         },
       ],

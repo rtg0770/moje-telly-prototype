@@ -16,17 +16,5 @@
 
     > .cards {
         grid-area: cards;
-        display: grid;
-        gap: 21px;
-        justify-content: center;
-        align-items: center;
-
-        // Default for mobile: 1 column
-        grid-template-columns: 1fr;
-
-        // Starting from medium breakpoint: 3 columns
-        @include respond-to('medium') {
-            grid-template-columns: repeat(3, 1fr);
-        }
     }
 }

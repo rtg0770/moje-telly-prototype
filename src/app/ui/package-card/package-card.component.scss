@@ -1,6 +1,6 @@
 @import "../../../scss/variables";
 @import "../../../scss/mixins";
-
+/// ADD DISABLED FOR CARDS - there is relation between selected package in a group and items in another group.
 .package-card {
   border: 2px solid transparent;
   border-radius: $s-space;
@@ -10,18 +10,6 @@
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
   position: relative;
   max-width: 100%;
-
-  @include respond-to('small') {
-    max-width: 100%;
-  }
-
-  @include respond-to('medium') {
-    max-width: 317px;
-  }
-
-  @include respond-to('large') {
-    max-width: 347px;
-  }
 
   &.selected {
     box-shadow: none;
@@ -96,6 +84,11 @@
     font-weight: 700;
     width: 100%;
     text-align: center;
+  }
+
+  &__one-price {
+    font-size: $big-font;
+    font-weight: 700;
   }
 
   &__price-per-month {

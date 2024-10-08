@@ -1,5 +1,21 @@
+<telly-navbar></telly-navbar>
 <div class="package-groups">
+  <h2>Zvolte si balíček</h2>
+  <p>
+    Momentálně nemáte zakoupený žádný balíček. Vyberte si prosím z nabídky
+    balíčků níže. V případě, že jse si zakoupili balíček před méně než hodinou,
+    zkuste
+    <a href="#">Aktualizovat</a> Zkontrolovat všechny smlouvy na můj email zde
+  </p>
   @for(group of packageGroups; track group){
-  <ui-package-list [packageGroup]="group"></ui-package-list>
-  }
+  <h2>{{ group.title }}</h2>
+  <ui-package-list
+    [packageGroup]="group"
+    [ngClass]="group.showType ? group.showType.toLowerCase() : ''"
+  ></ui-package-list>
+  @if(group.showType === 'HBO'){
+  <p>
+    *Balíček max můžete zakoupit pouze při zakoupení základního balíčku HBO.
+  </p>
+  } }
 </div>

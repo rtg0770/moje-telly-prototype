@@ -1,1 +1,48 @@
-<p>page-sign-in works!</p>
+<telly-logo></telly-logo>
+
+<div class="login-page">
+  <h2 class="login-page__title">Přihlášení do moje Telly</h2>
+  <p class="login-page__description">
+    Pro přihlášení do Moje Telly zadejte své přihlašovací údaje.
+  </p>
+
+  <form class="login-page__form">
+    <div class="login-card">
+      <label for="email">E-mailová adresa</label>
+      <input
+        type="text"
+        id="email"
+        class="login-card__input"
+        placeholder="Username"
+      />
+
+      <label for="password">Heslo</label>
+      <input
+        type="password"
+        id="password"
+        class="login-card__input"
+        placeholder="Password"
+      />
+
+      <button type="submit" class="login-card__button">Přihlásit se</button>
+    </div>
+  </form>
+
+  <div class="login-page__banner login-page__banner--left">
+    <img
+      src="./banners/telly-fotbal.png"
+      alt="Fotbal"
+      class="login-page__banner-image"
+    />
+  </div>
+
+  <div class="login-page__banner login-page__banner--right">
+    <img
+      src="./banners/telly-oktagon.png"
+      alt="Oktagon"
+      class="login-page__banner-image"
+    />
+  </div>
+</div>
+
+<telly-download-app></telly-download-app>

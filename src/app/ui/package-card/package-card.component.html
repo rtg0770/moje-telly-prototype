@@ -23,12 +23,17 @@
     <span class="package-card__description">{{ description }}</span>
   </div>
   <div class="package-card__pricing">
-    <span class="package-card__price-per-month"
+    @if(onePrice){
+    <span class="package-card__one-price">{{
+      onePrice | currency : "CZK"
+    }}</span>
+    } @if(pricePerMonth){<span class="package-card__price-per-month"
       >{{ pricePerMonth | currency : "CZK" }} měsíčně</span
-    >
+    >} @if(pricePerDay){
     <span class="package-card__price-per-day"
       >({{ pricePerDay | currency : "CZK" }} / 1 den)</span
     >
+    }
   </div>
   <div class="package-card__actions">
     <button

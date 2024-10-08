@@ -1,0 +1,50 @@
+@import "../../../scss/variables";
+
+h3, p {
+    text-align: center;
+}
+
+.download-button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    padding: 20px 0;
+  }
+
+.download-button {
+    display: grid;
+    grid-template-columns: 1fr 4fr; /* Logo column takes 1/5, text takes 4/5 */
+    align-items: center;
+    padding: 10px;
+    border: 1px solid $color-textBlack;
+    border-radius: 8px;
+    text-decoration: none; /* Remove underline from the link */
+    background-color: #fff;
+    color: inherit; /* Ensure it uses the parent color */
+    gap: 8px;
+    width: 150px;
+  
+    &__logo {
+      grid-column: 1 / 2;
+      justify-self: center;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      grid-column: 2 / 3;
+    }
+  
+    &__vector-text {
+      margin-top: 4px; /* Optional: add some spacing between action text and vector text */
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  

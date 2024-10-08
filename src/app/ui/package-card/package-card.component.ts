@@ -23,13 +23,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './package-card.component.scss',
 })
 export class PackageCardComponent {
-  @Input() label!: string;
+  @Input() label?: string;
   @Input() duration?: string;
   @Input() description?: string;
   @Input() discount?: string;
   @Input() previousPricePerMonth?: number;
-  @Input() pricePerMonth!: number;
-  @Input() pricePerDay!: number;
+  @Input() onePrice?: number;
+  @Input() pricePerMonth?: number;
+  @Input() pricePerDay?: number;
   @Input() selected: boolean = false;
   @Input() chips?: string[];
   @Input() gradient?: string;
